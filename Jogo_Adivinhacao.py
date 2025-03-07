@@ -9,7 +9,12 @@ total_tentativas = 9
 
 for rodadas in range (1,total_tentativas):
     print(f"Tentativa {rodadas} de 8")
-    chute = int(input("Digite o seu número: \n"))
+    chute = int(input("Digite um número entre 20 e 80: \n"))
+    
+
+    if(chute < 20 or chute > 80):
+        print("Você deve digitar um número entre 20 e 80!")
+        continue 
 
     acertou = numero_secreto == chute
     chute_maior = chute > numero_secreto
