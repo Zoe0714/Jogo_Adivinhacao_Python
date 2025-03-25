@@ -6,6 +6,7 @@ print("Acerte o número para ganhar!\n")
 print("°°°°°°°°°°°°°°°°°")
 
 numero_secreto = round(random.randrange(50,80))
+total_tentativas = 5
 pontos = 100
 
 print(numero_secreto)
@@ -27,7 +28,7 @@ for rodadas in range (1,total_tentativas):
     chute = int(input("Digite um número entre 20 e 80: \n"))
     
 
-    if(chute < 50 or chute > 80):
+    if(chute > 50 or chute < 80):
         print("Você deve digitar um número entre 50 e 80!")
         continue 
 
@@ -42,6 +43,9 @@ for rodadas in range (1,total_tentativas):
 
     if(acertou):
         print(f"Você acertou! Sua pontuação foi {pontos} pontos\n")
+        print("°°°°°°°°°°°")
+        print("Parabéns! Fim de Jogo")
+        print("°°°°°°°°°°°")
         break
 
     else:
@@ -52,6 +56,3 @@ for rodadas in range (1,total_tentativas):
             pontos_perdidos = abs(numero_secreto - chute)
             pontos = pontos - pontos_perdidos
 
-print("°°°°°°°°°°°")
-print("Parabéns! Fim de Jogo")
-print("°°°°°°°°°°°")
