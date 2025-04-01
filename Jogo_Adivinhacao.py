@@ -61,4 +61,4 @@ for rodadas in range (1, total_tentativas + 1):
 if pontos > 0:
     print("Fim de jogo. Essa foi sua pontuação:", pontos)
 else:
-    print("Fim de jogo. VOcê não pontuou.")
+    print("Fim de jogo. Você não pontuou.")
